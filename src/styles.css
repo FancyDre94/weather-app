@@ -107,11 +107,11 @@ hr {
   padding: 0px 0px;
   margin: 0 auto;
 }
-.source {
-  text-align: center;
-}
+
 a {
   text-decoration: none;
   color: #f2f7ff;
   text-align: center;
+  padding: 0px 0px;
+  margin: 0 auto;
 }
