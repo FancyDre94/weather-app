@@ -110,3 +110,7 @@ hr {
 .source {
   text-align: center;
 }
+a {
+  text-decoration: none;
+  color: #f2f7ff;
+}
