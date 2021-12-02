@@ -26,7 +26,7 @@
     <form>
       <div class="search" id="search-text-input">
         <div class="row">
-          <div class="col-3">
+          <div class="col-md-3">
 						<input type="text" 
 						class="form-control city" 
 						placeholder="City" 
@@ -34,7 +34,7 @@
 						autofocus="off"
 						id="city-input"/>
           </div>
-          <div class="col-2">
+          <div class="col-md-2">
 						<input type="text" 
 						class="form-control city"
 						 placeholder="State" 
@@ -42,7 +42,7 @@
 						autofocus="off"
 						 id="state-input"/>
           </div>
-          <div class="col" id="search-location">
+          <div class="col-md-2" id="search-location">
 						
 							<input type="submit" 
 							class="btn btn-primary"
@@ -61,6 +61,14 @@
     </form> <h1>
 		 Current Forecast:
 	 </h1>
+	 <ul>
+		 <li id="windSpeed">
+			 Wind Speed: 5mp
+		 </li>
+		 <li id="weaterDiscription">
+			 Cloudy
+		 </li>
+	 </ul>
 	 <h3 id="city">
 		 Detroit, MI
 	 </h3>
@@ -70,11 +78,11 @@
 			<div class="card col currentTemp" style="width: 25rem;">
 				
 					<div class="card-body">
-						<h4 class="card-title" id="currentCityTemp">68℉ 
+						<h4 class="card-title" id="currentCityTemp">68<span class="converson"><a href="#" id="fahrenheit-link" class="active-link">℉</a> |<a href="#" id="celsius-link">℃</a></span>
 							
 						</h4>
 						<h6>🌤</h6>
-						<p class="card-text"></i><div class="minMax"><span>
+						<p class="card-text"><div class="minMax"><span>
 						73°/64°</span></div></p>
 						
 					</div>
@@ -88,7 +96,7 @@
 						<div class="card col tempCard" style="width: 18rem;">
 											<div class="card-body">
 												<h5 class="card-title">73°/64°</h5>
-												<p class="card-text"></i><div class="minMax">
+												<p class="card-text"><div class="minMax">
 												Saturday</div></p>
 												
 											</div>
@@ -97,7 +105,7 @@
 										<div class="card col tempCard" style="width: 18rem;">
 												<div class="card-body">
 													<h5 class="card-title"> 76°/68°</h5>
-													<p class="card-text"></i><div class="minMax">
+													<p class="card-text"><div class="minMax">
 												Sunday
 													</div></p>
 												</div>
@@ -107,7 +115,7 @@
 											<div class="card col tempCard" style="width: 18rem;">
 													<div class="card-body">
 														<h5 class="card-title"> 80°/66°</h5>
-														<p class="card-text"></i><div class="minMax">
+														<p class="card-text"><div class="minMax">
 														Monday </div></p>
 													</div>
 												</div>
@@ -115,7 +123,7 @@
 												<div class="card col tempCard" style="width: 18rem;">
 														<div class="card-body">
 															<h5 class="card-title"> 72°/61°</h5>
-															<p class="card-text"></i><div class="minMax">
+															<p class="card-text"><div class="minMax">
 															Tuesday</div></p>
 														</div>
 													</div>
@@ -123,7 +131,7 @@
 													<div class="card col tempCard" style="width: 18rem;">
 															<div class="card-body">
 																<h5 class="card-title"> 73°/61°</h5>
-																<p class="card-text"></i><div class="minMax">
+																<p class="card-text"><div class="minMax">
 																Wednesday</div></p>
 															</div>
 														</div>

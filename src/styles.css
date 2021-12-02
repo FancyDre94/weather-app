@@ -119,3 +119,12 @@ a {
   padding: 0px 0px;
   margin: 0 auto;
 }
+li {
+  color: #f2f7ff;
+  text-decoration: none;
+}
+
+.card-body .conversion {
+  font-size: 25px;
+  position: relative;
+}
