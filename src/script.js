@@ -2,7 +2,7 @@ let now = new Date();
 console.log(now);
 let h2 = document.querySelector("h2");
 
-let days = ["Sunday", "Monday", "Tuesday", "Wednsday", "Thursday", "Friday"];
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 let day = days[now.getDay()];
 let hour = now.getHours();
 if (hour < 10) {
@@ -50,29 +50,11 @@ function getCurrentPosition(event) {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
-function showCelsiusTemp(event) {
-  event.preventDefault();
-  let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
-  let currentCityTempElement = document.querySelector("#currentCityTemp");
-  currentCityTempElement.innerHTML = Math.round(celsiusTemperature) + "℃";
-}
-function showFahrenheitTemperature(event) {
-  event.preventDefault();
-  let currentCityTempElement = document.querySelector("#currentCityTemp");
-  currentCityTempElement.innerHTML = Math.round(fahrenheitTemperature) + "℉";
-}
-
 let current = document.querySelector("#currentLocation");
 current.addEventListener("click", getCurrentPosition);
 let searchResult = document.querySelector("#search-location");
 searchResult.addEventListener("submit", showPosition);
 let searchElement = document.querySelector("form");
 searchElement.addEventListener("submit", searchCity);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCelsiusTemp);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 let fahrenheitTemperature = null;
