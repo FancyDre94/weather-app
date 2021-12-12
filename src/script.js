@@ -14,6 +14,34 @@ if (minutes < 10) {
 }
 h2.innerHTML = `${day} ${hour} : ${minutes}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tues"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  
+						<div class="col-2"><div class="weatherForecastDate">
+							${day}
+						</div>
+											<img src="http://openweathermap.org/img/wn/50d@2x.png"
+											alt=""
+											width="42"
+											/> <br><div class="weatherForecastTemp"> <span class="weatherForecastMax">18°</span>
+											<span class="weatherForecastMin">12°</span> </div>
+											</div>
+											
+										
+`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function searchCity(city) {
   event.preventDefault();
   let search = document.querySelector("#city-input");
@@ -58,3 +86,4 @@ let searchElement = document.querySelector("form");
 searchElement.addEventListener("submit", searchCity);
 
 let fahrenheitTemperature = null;
+displayForecast();
